@@ -28,11 +28,11 @@ In any class, add `use F1;` before the class declaration.
 
 The builtin `F1` façade uses Guzzle's HTTP Client + OauthPlugin to make the requests.  Consult their documentation for building requests and handling responses.
 
-For example, create a request to F1's API by using the appropriate endpoint and format:
+For example, create a request to Fellowship One's API by using the appropriate endpoint and format:
 
     $request = F1::get('v1/people/statuses.json')->send();
 
-Consulting Guzzle, there are multiple ways to get handle the response:
+Using Guzzle, there are multiple ways to handle the response:
 
     $response = $request->getBody(true);
 
@@ -40,6 +40,6 @@ Or, use Guzzle's built in `json()` method:
 
     $response = $request->json();
 
-Check Guzzle's documentation for more help.
+Check Guzzle's documentation for more help (including leveraging Exceptions, etc).
 
 Questions: @avr
